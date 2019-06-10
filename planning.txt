@@ -1,0 +1,43 @@
+// Make sure firebase work
+
+//Place your firebase stuff in the valid "if"
+
+find a way to get the mail in the db 
+
+organise all the cases
+
+redesign the paypal button
+
+test checkout
+
+custom success 
+
+custom error
+
+generate the custom url
+
+//change the website depending of the url
+
+readjust the pics
+
+fill the 1 cases
+
+fill the 2 cases
+
+fill the 3 cases
+
+place the pics and the footer stuff
+
+Mediaquery
+
+HOST IT //HOST IT //HOST IT //HOST IT //HOST IT //HOST IT //HOST IT //HOST IT //HOST IT //HOST IT //HOST IT //
+
+
+
+
+
+
+
+
+
+

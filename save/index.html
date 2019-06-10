@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from thanosjs.org/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 May 2019 14:44:23 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<head>
+  <meta charset="UTF-8" />
+  <title>$$$$</title>
+  <link href="styles.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A demo site to use with Netlify Drop">
+  <meta name="keywords" content="Thanos, JavaScript, Paradoy, Netlify Drop">
+  <meta name="author" content="Rafael Conde">
+  <script
+    src="https://www.paypal.com/sdk/js?client-id=AZ55BLLLl8LOE7mIuJwphNqRYYuDO8AJ8KWo88_4bEocMYSC04k79EIcjWwyvcEJNcZU1VFAaj_SGFRp&currency=USD""></script>
+  <link rel=" icon" type="image/png" sizes="16x16"
+    href="https://cdn3.iconfinder.com/data/icons/shopping-and-retail-15/512/gemstone-512.png">
+</head>
+<script src="https://www.gstatic.com/firebasejs/5.11.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase-firestore.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDQ6PU3FQfvKjINJE1B3zFxomxVsEDc96w",
+      authDomain: "betpeople-a64b6.firebaseapp.com",
+      databaseURL: "https://betpeople-a64b6.firebaseio.com",
+      projectId: "betpeople-a64b6",
+      storageBucket: "betpeople-a64b6.appspot.com",
+      messagingSenderId: "677152084316"
+    };
+    firebase.initializeApp(config);
+
+    var db = firebase.firestore();
+  </script>
+
+<body>
+  <div class="titan-background">
+    <span class="stars stars-L"></span>
+    <span class="stars stars-M"></span>
+    <span class="stars stars-S"></span>
+  </div>
+  <script>
+    var sfDocRef = db.collection("users").doc("FbHWb7DYFA7WMG5tPubE");
+
+    paypal.Buttons({
+
+      createOrder: function (data, actions) {
+        if (adressmail() != "" && emailIsValid(adressmail())) {
+          console.log(adressmail());
+          return actions.order.create({
+            purchase_units: [{
+              amount: {
+                value: '2.0'
+              }
+            }]
+          });
+        } else {
+          alert("hello");
+          document.getElementById("mail").value = "you need to put an mail adress !!"
+        }
+      },
+      onApprove: function (data, actions) {
+
+        // Capture the funds from the transaction
+        return actions.order.capture().then(function (details) {
+          return fetch('/paypal-transaction-complete', {
+          method: 'post',
+          headers: {
+            'content-type': 'application/json'
+          },
+          body: JSON.stringify({
+            orderID: data.orderID
+          })
+         });
+
+          db.collection("users").add({
+            mail: adressmail(),
+            time: new Date(),
+            amount: 0,
+            // currency: "Dollar"
+          }).then(function (docRef) {
+            console.log("Document written with ID: ", docRef.id);
+            shrinkUrl(docRef.id);
+          })
+            .catch(function (error) {
+              console.error("Error adding document: ", error);
+            });;
+          db.runTransaction(function (transaction) {
+            // This code may get re-run multiple times if there are conflicts.
+            return transaction.get(sfDocRef).then(function (sfDoc) {
+              if (!sfDoc.exists) {
+                throw "Document does not exist!";
+              }
+
+              var newcash = sfDoc.data().cash + 2;
+              transaction.update(sfDocRef, { cash: newcash });
+
+            });
+          }).then(function () {
+            console.log("Transaction successfully committed!");
+          }).catch(function (error) {
+            console.log("Transaction failed: ", error);
+          });
+          // Show a success message to your buyer
+          alert('Transaction completed by ' + details.payer.name.given_name);
+        });
+      }
+    }).render('.paypal-button');
+
+
+
+
+    
+  </script>
+
+  <div class="marvellous-container">
+    <div class="header">
+
+      <h1><span class="title-marvel">two</span> <span class="title-studios">Dollar</span></h1>
+      <h2>
+        Pay two Dollar, Get one Link <br />
+        Earn two dollar for each paid Link
+
+      </h2>
+    
+
+      <div id="translate"></div>
+    </div>
+    <div class="installation-instructions">
+      <h3>you will pay to get paid, so they will pay to get paid </h3>
+      <code >you will be paid on your mail</code>
+      <code>7000 million Dollar potential Market </code>
+      <code>If you don't earn more than two Dollar, we will refund you within 30 days</code>
+      <code><center><span class="title-marvel0">two</span><span class="title-studios0">Dollar</span><span class="title-marvel2">FIVE</span><span class="title-studios2">Dollar</span><span class="title-marvel3">TWENTY</span><span class="title-studios3">Dollar</span><span class="title-marvel4">HUNDRED</span><span class="title-studios4">Dollar</span></center></code>
+      <code class="robb">insert your mail : <input id="mail" class="mail" type="mail" type="text"></code>
+      <code class="paypal-button"></code>
+    </div>
+    <div class="usage-instructions">
+      <h3>Your url will appear below</h3>
+      <code
+        style="font-size: 110%;"><center id="shrinkurl">http://This-is-a-Pass?of=1/Dollar/owned/by=eric@gmail.com/</center></code>
+    </div>
+    <div class="footer">
+      <img src="https://cdn3.iconfinder.com/data/icons/shopping-and-retail-15/512/gemstone-512.png"/>
+
+
+
+      <p>
+        The maximum amount you can earn is <u>20 000 $ per week</u>.
+
+      </p>
+      <script>
+        function adressmail() {
+
+          return document.getElementById("mail").value;
+
+        }
+        function emailIsValid(email) {
+          return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+        }
+
+
+        function shrinkUrl(doc_id) {
+
+          document.getElementById("shrinkurl").innerHTML = "http://This-is-a-Pass?of=1/Dollar/owned/by=" + doc_id;
+
+        }
+        
+
+      </script>
+    </div>
+  </div>
+</body>
+
+<!-- Mirrored from thanosjs.org/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 May 2019 14:44:24 GMT -->
+
+</html>

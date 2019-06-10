@@ -1,0 +1,332 @@
+body{
+    background-color: rebeccapurple;
+
+}
+
+
+@import url("../rsms.me/inter/inter-ui.css");
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter UI", sans-serif;
+  text-align: center;
+  color: white;
+}
+
+i{
+
+
+  font-family: Verdana, Tahoma;
+  font-weight: bold;
+  font-size: 26px;
+}
+.i1{
+
+ color:  #253B80
+}
+.i2{
+  color:  #199AD8
+
+
+}
+
+
+
+.buttonpaypal{
+background-color: #FFC036;
+border: none;
+vertical-align: initial;
+
+border-radius: 5px;
+height: 50px;
+font-size: 100%;
+}
+
+.yellowcolortext{
+
+  color: #FFC338;
+}
+
+.buttonpaypal:hover{
+cursor: pointer;
+border: 2px #1B99D8 solid;
+
+
+
+
+}
+.codeurl{
+margin-top: 10px;
+
+
+}
+.codo{
+margin-bottom: 64px;
+
+
+}
+
+
+.titan-background {
+  position: absolute;
+  width: 100%;
+  background-image: linear-gradient(-180deg, #000000 0%, #200835 100%);
+  overflow: hidden;
+  z-index: 1;
+  /* Make the rubber band scroll not show empty white space */
+  top: -10%;
+  height: 120%;
+  min-height: 120vh;
+  margin-bottom: -20%;
+}
+
+.stars {
+  position: absolute;
+  top: 0;
+  width: 300vw;
+  height: 100vh;
+  transform: translate(0%, 0%);
+  background-size: contain;
+  background-repeat: repeat;
+  transform-origin: top left;
+}
+
+.stars-L {
+  background-image: url("assets/stars-L.svg");
+  background-size: 890px;
+  height: 750px;
+  animation: panning-stars 200s linear infinite alternate;
+}
+
+.stars-M {
+  background-image: url("assets/stars-M.svg");
+  height: 530px;
+  animation: panning-stars 300s linear infinite alternate;
+}
+
+.stars-S {
+  background-image: url("assets/stars-S.svg");
+  height: 370px;
+  animation: panning-stars 400s linear infinite alternate;
+}
+
+@keyframes panning-stars {
+  from {
+    transform: translate(-20%, 0%);
+  }
+  to {
+    transform: translate(-80%, -40%);
+  }
+}
+
+.marvellous-container {
+  position: relative;
+  z-index: 2;
+  padding: 104px 0 24px 0;
+  width: 95%;
+  max-width: 600px;
+  margin: auto;
+}
+
+h1 {
+  display: block;
+  font-size: 80px;
+  margin: 0 0 24px 0;
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 16vw;
+  }
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 24px;
+  margin-top: 40px;
+}
+
+h3 {
+  font-weight: 300;
+  font-size: 24px;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.title-marvel {
+  font-weight: bolder;
+  color: #020103;
+  letter-spacing: -6.7px;
+  text-transform: uppercase;
+  padding: 0 16px;
+  background: #9b00f5;
+}
+
+
+
+.title-studios {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  color: #9b00f5;
+  letter-spacing: -4.5px;
+  text-transform: uppercase;
+  padding: 0 16px;
+  border-color: #9b00f5;
+  border-top: 8px solid;
+  border-bottom: 8px solid;
+  line-height: 1;
+}
+
+.title-marvel0 {
+  font-weight: bolder;
+  color: #020103;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+  padding: 0 4px;
+  background: #9b00f5;
+}
+
+
+
+.title-studios0 {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  color: #9b00f5;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  padding: 0 4px;
+  border-color: #9b00f5;
+  border-top: 4px solid;
+  border-bottom: 4px solid;
+  line-height: 1;
+}
+
+
+
+.title-marvel2 {
+  margin-left: 10px;
+  font-weight: bolder;
+  color: #020103;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+  padding: 0 4px;
+  background: #519BE8;
+}
+
+.title-studios2 {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  color: #519BE8;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  padding: 0 4px;
+  border-color: #519BE8;
+  border-top: 4px solid;
+  border-bottom: 4px solid;
+  line-height: 1;
+}
+
+.title-marvel3 {
+  margin-left: 10px;
+  font-weight: bolder;
+  color: #020103;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+  padding: 0 4px;
+  background: #0BFF93;
+}
+
+.title-studios3 {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  color: #0BFF93;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  padding: 0 4px;
+  border-color: #0BFF93;
+  border-top: 4px solid;
+  border-bottom: 4px solid;
+  line-height: 1;
+}
+
+.title-marvel4 {
+  font-weight: bolder;
+  color: #020103;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+  padding: 0 4px;
+  margin-left: 10px;
+  background: #FFC338;
+}
+
+.title-studios4 {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  color: #FFC338;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  padding: 0 4px;
+  border-color: #FFC338;
+  border-top: 4px solid;
+  border-bottom: 4px solid;
+  line-height: 1;
+}
+
+
+code {
+  display: block;
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 18px;
+  width: 100%;
+  padding: 16px 24px;
+  background: rgba(44, 37, 44, 0.8);
+  border: 1px solid #7f797f;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.mail{
+width: 300px;
+height: 30px;
+background-color: #271F28;
+border: 0px black solid;
+color: white;
+font-size: 100%;
+border-radius: 2px;
+
+
+}
+
+
+.header {
+  margin-bottom: 1px;
+}
+
+.installation-instructions,
+.usage-instructions {
+  margin-top: 64px;
+}
+
+.footer {
+  margin-top: 100px;
+}
+
+.footer img {
+  height: 104px;
+  width: auto;
+}
+
+
+
+

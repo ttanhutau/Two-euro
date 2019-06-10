@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "betpeople-a64b6",
+  "private_key_id": "6f36b3e08cb8b9aa6b600ecc0be542f17e760f6d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCmqby7+XkqlP4c\nXg4baP8+wdIX3dp3vCfrZ4jmMQHWle0LvK6caQQuJR4vmz0pZsTPfDHj63Ewhl96\nqFvHt6sGpxOLnHPNfLhl7zstOPHae1jF7ZeLd6iFpn73z93WV/+0VcMQjMEqmd+B\nfR8GPvIygktS3eFSQxshGgqJePfO40oX9BoQMm+iDPWeskQjf//4mI4o/sKy40q0\nBTPHiPp0VURL5I9g1Fgjsu561KKHo+HTrNxkF93njUS6R2uALbqp8XnkD1cDtmLt\nWLsG/EVugQXGgfr3fLtYxoyqzRa/uWVhsa2YnAy+Dn0oJ8/bVo3xHncwwBLDywj1\n4G7AQZATAgMBAAECggEACYdBFz1zPB1/jQSi6YCZEy/xQH8Pu0e3v+F6oK/Nle9F\nZFCPFQ8l94i/ZI5gsp9sV3EXcxs7V0BfcLueX66JqcbfOwdLUZoJ+tNGFAGiRiZG\nKYQPZXWxCKRqXuWfSQldQPn5kyvQ7AwXDKf9dZXKCAbjTTi1O0bt4/hsAMxjMoyR\ncytiGTnbAj1+YpeNhtGnzA2jfDWIZHNQHV5VenkmLRvjaCRy9JfRM8+XaXnurzO6\nqUcHsSNrsIBmGssDIL/44XNcrg4hRI/Su1TZpWAGFOHxrBQ6ay8KsMxeKYWOPAby\np6Ixn7zIW3LIboetCAeGiZfrsk0N/bQ56XjndvPN9QKBgQDTOHKzbeWk894nDrfZ\n0SFHIWYyxuJdXD0CRskGccH0j5itxjctj9rcLdUKDm5HQhZ2mY+sOAYErKsqt5U1\n6p1SkaLzsVbODob8SZ/joV02NaMUEA5zJXwV5M4I/pOSnTSWbP56eDiIrtEL1Ylu\nS2CS1YY4MwQ1zWiq3GMgasQzZwKBgQDJ/waajZP7JmY+WLsU+HoT+JbEtEriNrpg\nkSSdmuyjArFHeu0QqreQsCflJcktPvzgagq4TAPalDvrCSrl9+vrDiTcNngJmXQX\nqEtOvoXCd1M4Ho/IZ3zPx4zcUdy5vbSCWOhzzNtxAQfFS3XE+6iwqQdslR+brwEt\n/FPZSvAedQKBgCHsqQ+EkSPDP2UKiiDj4/JmvOFe7DCOhgX9lIACeWJsRdtzQJ2C\nw2YlvlfVJYUwaic2VssUXHMXwI4l2kNEoWwHlCKL0yNZVfjjYljPLAdu6fho88ku\nthVWIHl1WgJsWWvnqZ/F+16IpW6/J0mdta8fuGUCXKS/jxYSO6GTRFv1AoGBAIgF\nuAizdgcV4JvzXGfOu0ZfjAeB8TtL503H74RCIz/SPFcKLEGg9GP2e6cPPt29IMRu\nJDHe3ml+kKrBTaX2wWNT7vZrp4GvWEHmDnBEVAaUG/IagnBNX/r7QZvLdHuPh9KO\n1FnGha8fJoBxRCkV3o64BEvWT6aivoSc+knE8NVRAoGBAJ+n0K6sP+6jfv4GoU1s\nSi5iHQJic3YeaV67PaeRU8Q2jBMDvaUEprY6LVBOUgdXJ7fIAYOV1umibbwibHbo\n5Hl7d5ukTm8nMz+JVAtBMFW1akP3bW40Z1yD3g/zs97OU4Vjeq/BQovmfkOATPsP\nWRUMSlUMvdd7FXpjFn+ONGUN\n-----END PRIVATE KEY-----\n",
+  "client_email": "betpeople-a64b6@appspot.gserviceaccount.com",
+  "client_id": "117059270651720451127",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/betpeople-a64b6%40appspot.gserviceaccount.com"
+}

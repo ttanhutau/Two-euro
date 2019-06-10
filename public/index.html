@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from thanosjs.org/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 May 2019 14:44:23 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<head>
+  <meta charset="UTF-8" />
+  <title>$$$$</title>
+  <link href="styles.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A demo site to use with Netlify Drop">
+  <meta name="keywords" content="Thanos, JavaScript, Paradoy, Netlify Drop">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <meta name="author" content="Rafael Conde">
+  <link rel=" icon" type="image/png" sizes="16x16"
+    href="https://cdn3.iconfinder.com/data/icons/shopping-and-retail-15/512/gemstone-512.png">
+</head>
+
+
+
+<body>
+
+
+
+  <div class="titan-background">
+    <span class="stars stars-L"></span>
+    <span class="stars stars-M"></span>
+    <span class="stars stars-S"></span>
+  </div>
+
+
+
+
+  <div class="marvellous-container">
+    <div class="header">
+
+
+      <h1><span class="title-marvel">two</span> <span class="title-studios">Euro</span></h1>
+      <h2>
+
+        Offrez deux EUROs au propriétaire du lien
+
+      </h2>
+
+
+      <!-- // you pay to Euro, you get a custom link, you share this link and get two Euro, people will then have a custom link, they will share the custom link  
+    // vous payer la personne à qui appartien le lien, vous obtenez votre propre lien, vous 
+    
+    -->
+      <code class="codeurl" style="font-size: 110%; color: #FFC036;"><center ><div id="shrinkurl"></div></center></code>
+
+    </div>
+    <div class="installation-instructions">
+
+      <code><center>Un lien unique vous sera alors délivré</center></code>
+      <code><center> Partagez le a X personnes, et <div class="yellowcolortext">gagnez X fois 2 euros </div></center></code>
+
+      <code class="codo"><center>X  =  nombre de personnes qui souhaites beneficier de leur propre lien </center></code>
+
+
+      <code><center>Tous les vendredis, vous recevrez votre solde hebdomadaire sur votre mail en toute sécurité </center></code>
+      <code><center><img src="paypal-payouts-recipient-notifications.svg" style="width: 300px" alt="">
+     <br>Accepter la transaction et votre solde sera automatiquement alimenté sur votre compte Paypal
+      </center></code>
+
+      <code class="robb">Entrez votre mail : <input id="mail" class="mail" type="mail" type="text"></code>
+      <code class="paypal-button">
+          <a class="readytopay"  target="_blank" > 
+            <center><button id="buttonpaypal"class="buttonpaypal" style="font-size: 15px"> Pay Two Euro with  <i class="i1">Pay</i> <i class="i2">Pal</i></button> </center>
+            </a> 
+      
+      
+
+      </code>
+      <code
+        style="margin-top: 64px">Le seul moyen d'obtenir un lien est d'en recevoir un soit même certain lien sont plus rare que d'autres :</code>
+      <code><center><span class="title-marvel0">two</span><span class="title-studios0">Euro</span><span class="title-marvel2">FIVE</span><span class="title-studios2">Euro</span><span class="title-marvel3">TWENTY</span><span class="title-studios3">Euro</span><span class="title-marvel4">HUNDRED</span><span class="title-studios4">Euro</span></center></code>
+    </div>
+
+    <div class="footer">
+      <img src="https://cdn3.iconfinder.com/data/icons/shopping-and-retail-15/512/gemstone-512.png" />
+
+
+
+      <p>
+        <!-- The maximum amount you can earn is <u>20 000 $ per week</u>. -->
+        Si vous rencontrez un problême rendez vous sur <br><a
+          href="https://www.paypal.com/us/smarthelp/article/how-do-i-request-a-refund-faq406">https://www.paypal.com/us/smarthelp/article/how-do-i-request-a-refund-faq406</a><br>
+
+      </p>
+      <div id="snackbar">well done my boy!!</div>
+
+
+
+
+      <script>
+
+
+        console.log(getQueryVariable("id"));
+        var id = getQueryVariable("id");
+        
+        if (CheckIdExist()) {
+          document.getElementById("shrinkurl").innerHTML = id;
+        }
+        function CheckIdExist() {
+
+          return true;
+
+        };
+
+        function getQueryVariable(variable) {
+          var query = window.location.search.substring(1);
+          var vars = query.split("&");
+          for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split("=");
+            if (pair[0] == variable) { return pair[1]; }
+          }
+          return ("https://This-is-a-Two/Euro-link?ownedby=3948h92vZ");
+        }
+        function adressmail() {
+          return document.getElementById("mail").value;
+        }
+        function emailIsValid(email) {
+          return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+        }
+
+
+        function shrinkUrl(doc_id) {
+
+          document.getElementById("shrinkurl").innerHTML = "http://This-is-a-Pass?of=1/Euro/owned/by=" + doc_id;
+
+        }
+
+
+
+        $('.readytopay').click(function () {
+          if (adressmail() != "" && emailIsValid(adressmail())) {
+            document.location.href = "/buy";
+
+            var parameters = {
+              mail: document.getElementById("mail").value,
+              owwnerid: id
+            };
+
+            $.get('/searching', parameters, function (data) {
+
+            });
+          }else{
+            var x = document.getElementById("snackbar");
+          x.style.backgroundColor = "#9B01F5";
+          x.innerHTML = "Le mail est manquant";
+          x.className = "show";
+          setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+
+
+          }
+
+        });
+
+
+
+
+
+
+      </script>
+    </div>
+  </div>
+</body>
+
+
+</html>
